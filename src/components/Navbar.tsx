@@ -46,7 +46,7 @@ const Navbar = () => {
           className="text-xl font-bold font-display tracking-tight"
           onClick={() => setIsMenuOpen(false)}
         >
-          <span className="text-primary">Dev</span>Portfolio
+          <span className="text-primary">Pratik {" "}</span>Pokharel
         </Link>
 
         {/* Desktop Navigation */}
