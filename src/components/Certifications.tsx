@@ -10,7 +10,7 @@ const certificationsData = [
     issuer: 'Microsoft',
     date: '2023',
     credentialId: 'AI-900',
-    credentialUrl: 'https://example.com/credential',
+    credentialUrl: 'https://www.credly.com/badges/20942c7a-b4c0-43b2-b8ab-024a47adfe10/linked_in_profile',
     skills: ['Azure AI', 'Machine Learning', 'Cognitive Services', 'Natural Language Processing'],
   },
   {
@@ -19,8 +19,8 @@ const certificationsData = [
     issuer: 'Microsoft',
     date: '2023',
     credentialId: 'DP-900',
-    credentialUrl: 'https://example.com/credential',
-    skills: ['Azure Data Solutions', 'Relational Databases', 'Non-relational Data', 'Analytics'],
+    credentialUrl: 'https://www.credly.com/badges/72e73bec-ae19-4baf-81ba-bc37678ee966/linked_in_profile',
+    skills: ['Azure','Azure Databricks','Azure Cosmos DB','Power BI', 'Azure SQL Date Warehouse','Azure Date Engineer','SQL Server on Virtual Machines','Azure Data Solutions', 'Relational Databases', 'Non-relational Data', 'Analytics'],
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const certificationsData = [
     issuer: 'Certiport',
     date: '2022',
     credentialId: 'IT-Python-123',
-    credentialUrl: 'https://example.com/credential',
+    credentialUrl: 'https://www.credly.com/badges/ac0b0632-3018-4ce8-a6f3-4b8874522484/linked_in_profile',
     skills: ['Python Programming', 'Data Structures', 'OOP', 'File Handling', 'APIs'],
   },
   {
@@ -37,8 +37,26 @@ const certificationsData = [
     issuer: 'Microsoft',
     date: '2022',
     credentialId: 'SC-900',
-    credentialUrl: 'https://example.com/credential',
-    skills: ['Security', 'Compliance', 'Identity Management', 'Azure AD', 'Zero Trust'],
+    credentialUrl: 'https://www.credly.com/badges/96dcf4f3-2bab-4264-bff8-52e96c9d4cda/linked_in_profile',
+    skills: [
+      "Azure",
+
+      "Azure Active Directory",
+
+      "Cloud Security",
+
+      "Compliance",
+
+      "Compliance Management",
+      "Identity And Access Management",
+
+      "Information Protection And Governance",
+      "Microsoft 365",
+      "Microsoft Threat Protection",
+
+      "Security Management"]
+
+
   },
 ];
 
