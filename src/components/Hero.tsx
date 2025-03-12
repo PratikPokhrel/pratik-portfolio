@@ -24,7 +24,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
               Hi, I'm Pratik Pokharel
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-lg">
+            <p className="text-lg text-muted-foreground mb-8 max-w-md">
               With 3+ years of experience in .NET, C#, and web development, I build efficient, scalable solutions to complex problems. Let's create something exceptional together.
             </p>
             <div className="flex flex-wrap gap-4">

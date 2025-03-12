@@ -45,7 +45,7 @@ const Contact = () => {
         
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2 space-y-8">
-            <p className="text-lg">
+            <p className="text-md">
               Have a project in mind or want to discuss potential opportunities? I'd love to hear from you. Feel free to reach out using the form or through any of the contact methods listed.
             </p>
             

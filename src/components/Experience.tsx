@@ -10,10 +10,10 @@ const experienceData = [
     company: 'Rigo Technologies Nepal',
     duration: 'May 2021 - Mar 2022',
     description: [
-      'Developed and maintained Finance, ERP, HMS, and HRMS applications, ensuring scalable and efficient business solutions',
-      'Designed and implemented moderately complex software solutions using C# programming language in ASP.Net(MVC), Entity Framework, and Web API',
-      'Implemented the application\'s core components, including a Data Access Layer (DAL) and Business Logic Layer (BLL)',
-      'Evaluated and implemented new technologies to maximize the efficiency of web applications',
+      'Worked as a software developer in the creation and management of Finance, ERP, HMS, and HRMS applications, delivering scalable and efficient business solutions to both government and private institutions in Nepal.',
+      'Designed and implemented  complex software solutions using C# programming language in ASP.Net Core, MSSQL, PostgreSQL, Entity Framework, and Web API',
+      'Implemented the application\'s core components using SOLID design principle, including a Data Access Layer (DAL) and Business Logic Layer (BLL)',
+      'Evaluated and implemented new technologies to maximize the efficiency of web applications while working in a microservice architecture to enhance system flexibility and scalability.',
     ],
   },
   {
@@ -23,10 +23,10 @@ const experienceData = [
     duration: 'Aug 2020 - Mar 2021',
     description: [
       'Worked at a well-established U.S.-based healthcare provider company outsourced in Nepal',
-      'Developed and maintained ASP.NET Core Web API and .NET Core applications, implementing new features as required',
-      'Designed and developed backend systems using the Entity Framework Code-First approach with the Repository Pattern',
-      'Created and optimized Stored Procedures and Functions using SQL Server Management Studio',
+      'Designed, developed, and maintained scalable ASP.NET Core Web API and .NET Core applications by implementing new features and enhancements to meet business requirements',
+      'Created and optimized complex Stored Procedures, Functions, and Queries using SQL Server, ensuring efficient data retrieval and processing',
       'Managed features and tasks, ensuring timely completion ahead of deadlines',
+      'Collaborated within a large development team using JIRA for task management and GitHub for version control and communication'
     ],
   },
   {
@@ -38,7 +38,7 @@ const experienceData = [
       'Worked extensively on an asset and template management applications',
       'Designed and implemented a dynamic drag-and-drop form builder for surveys, leveraging JSON queries for automatic form generation',
       'Contributed to the design and implementation of database structures and APIs, ensuring data integrity and performance',
-      'Utilized technologies including C#, .NET Core, REST API, Entity Framework Core, LINQ, and MS SQL',
+      'Utilized technologies including C#, .NET Core, REST API, Entity Framework Core, LINQ, and MSSQL',
     ],
   },
 ];

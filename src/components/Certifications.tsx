@@ -8,16 +8,18 @@ const certificationsData = [
     id: 1,
     title: 'Microsoft Azure AI Fundamentals',
     issuer: 'Microsoft',
-    date: '2023',
+    date: 'April 10, 2024',
     credentialId: 'AI-900',
     credentialUrl: 'https://www.credly.com/badges/20942c7a-b4c0-43b2-b8ab-024a47adfe10/linked_in_profile',
-    skills: ['Azure AI', 'Machine Learning', 'Cognitive Services', 'Natural Language Processing'],
+    skills: ['Azure Bot Services',
+      'Azure Machine Learning',
+      'Cognitive Services'],
   },
   {
     id: 2,
     title: 'Azure Data Fundamentals',
     issuer: 'Microsoft',
-    date: '2023',
+    date: 'March 18, 2024',
     credentialId: 'DP-900',
     credentialUrl: 'https://www.credly.com/badges/72e73bec-ae19-4baf-81ba-bc37678ee966/linked_in_profile',
     skills: ['Azure','Azure Databricks','Azure Cosmos DB','Power BI', 'Azure SQL Date Warehouse','Azure Date Engineer','SQL Server on Virtual Machines','Azure Data Solutions', 'Relational Databases', 'Non-relational Data', 'Analytics'],
@@ -26,7 +28,7 @@ const certificationsData = [
     id: 3,
     title: 'IT Specialist-Python',
     issuer: 'Certiport',
-    date: '2022',
+    date: 'October 23, 2023',
     credentialId: 'IT-Python-123',
     credentialUrl: 'https://www.credly.com/badges/ac0b0632-3018-4ce8-a6f3-4b8874522484/linked_in_profile',
     skills: ['Python Programming', 'Data Structures', 'OOP', 'File Handling', 'APIs'],
@@ -35,7 +37,7 @@ const certificationsData = [
     id: 4,
     title: 'Microsoft Security, Compliance, and Identity Management',
     issuer: 'Microsoft',
-    date: '2022',
+    date: '2023',
     credentialId: 'SC-900',
     credentialUrl: 'https://www.credly.com/badges/96dcf4f3-2bab-4264-bff8-52e96c9d4cda/linked_in_profile',
     skills: [
@@ -165,6 +167,7 @@ const Certifications = () => {
                         <span
                           key={skill}
                           className="skill-badge text-xs"
+                          style={{backgroundColor:'#D9EAFD'}}
                         >
                           {skill}
                         </span>

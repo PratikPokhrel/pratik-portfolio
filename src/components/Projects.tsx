@@ -6,29 +6,26 @@ import { cn } from '@/lib/utils';
 const projectsData = [
   {
     id: 1,
-    title: 'University Greyhound Racing Data Project',
-    description: 'Led a data scraping and analytics project that managed over 3 million rows of racing data, developing a comprehensive pipeline for data extraction and analysis.',
+    title: 'University Project - Greyhound Racing Data',
+    description: 'Directed a data scraping and analytics project, processing over 3 million rows of racing data by implementing a structured pipeline for seamless extraction and storage in a local MSSQL database.',
     technologies: ['Python', 'BeautifulSoup', 'Selenium', 'MSSQL', 'ReactJS'],
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxNzc3Mg&ixlib=rb-4.0.3&q=80&w=900',
-    demoUrl: 'https://github.com/PratikPokhrel',
-    codeUrl: 'https://github.com/PratikPokhrel',
+    imageUrl: 'https://cdn.animalsaustralia.org/wp-content/uploads/2021/11/25104330/Greyhound_RacingHeader.jpg',
+    codeUrl: 'https://github.com/PratikPokhrel/GBGR_Scraper',
   },
   {
     id: 2,
     title: 'Enterprise Resource Planning System',
     description: 'Developed and maintained Finance, ERP, HMS, and HRMS applications for businesses, ensuring scalable and efficient business solutions with multiple integrated modules.',
-    technologies: ['C#', 'ASP.NET MVC', 'Entity Framework', 'SQL Server', 'jQuery'],
+    technologies: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'ReactJS', 'API'],
     imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxNzc3Mw&ixlib=rb-4.0.3&q=80&w=900',
-    demoUrl: 'https://github.com/PratikPokhrel',
     codeUrl: 'https://github.com/PratikPokhrel',
   },
   {
     id: 3,
     title: 'Dynamic Form Builder',
     description: 'Designed and implemented a dynamic drag-and-drop form builder for surveys, leveraging JSON queries for automatic form generation with customizable templates.',
-    technologies: ['JavaScript', 'jQuery', 'ASP.NET', 'C#', 'MS SQL'],
+    technologies: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'ReactJS', 'API'],
     imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxNzc3Ng&ixlib=rb-4.0.3&q=80&w=900',
-    demoUrl: 'https://github.com/PratikPokhrel',
     codeUrl: 'https://github.com/PratikPokhrel',
   },
 ];
@@ -105,15 +102,6 @@ const Projects = () => {
                         </div>
                         
                         <div className="flex gap-4">
-                          <a
-                            href={project.demoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
-                          >
-                            Live Demo
-                            <ExternalLink size={16} className="ml-2" />
-                          </a>
                           <a
                             href={project.codeUrl}
                             target="_blank"
