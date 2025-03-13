@@ -63,7 +63,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-10 rounded-xl"></div>
               <img
                 ref={imageRef}
-                src={`${getBasePath()}pratik-portfolio/uploads/364753015_9684088654998843_5728523195615897320_n.jpg`}
+                // src={`${getBasePath()}pratik-portfolio/uploads/364753015_9684088654998843_5728523195615897320_n.jpg`}
+                src={`${getBasePath()}/uploads/364753015_9684088654998843_5728523195615897320_n.jpg`}
                 alt="Pratik Pokharel"
                 className={`w-full h-full object-cover ${isImageLoaded ? 'loaded' : 'image-blur'}`}
                 onLoad={() => setIsImageLoaded(true)}
