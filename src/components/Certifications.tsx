@@ -29,7 +29,7 @@ const certificationsData = [
     title: 'IT Specialist-Python',
     issuer: 'Certiport',
     date: 'October 23, 2023',
-    credentialId: 'IT-Python-123',
+    credentialId: 'IT Specialist - Python',
     credentialUrl: 'https://www.credly.com/badges/ac0b0632-3018-4ce8-a6f3-4b8874522484/linked_in_profile',
     skills: ['Python Programming', 'Data Structures', 'OOP', 'File Handling', 'APIs'],
   },

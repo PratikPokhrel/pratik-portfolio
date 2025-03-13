@@ -1,5 +1,5 @@
 
-import { Code, Server, Database, Layout, ChartBar, Workflow } from 'lucide-react';
+import { Code, Server, Database, Layout, ChartBar, Workflow, Text } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -14,7 +14,7 @@ const About = () => {
     },
     {
       category: 'Database',
-      items: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB','Firebase']
+      items: ['MSSQL,MySQL', 'PostgreSQL', 'MongoDB','Firebase']
     },
     
     {
@@ -26,7 +26,7 @@ const About = () => {
       items: ['Azure DevOps', 'JIRA', 'GitLab', 'Asana']
     },
     {
-      category: 'IDE Toola',
+      category: 'IDE',
       items: ['Visual Studio', 'Visual Studio Code', 'Sublime Text', 'Notepada ++']
     },
 
@@ -38,6 +38,7 @@ const About = () => {
     Database: <Database className="h-6 w-6" />,
     Analytics: <ChartBar className="h-6 w-6" />,
     PMT : <Workflow className="h-6 w-6" />,
+    IDE :<Text className="h-6 w-6" />,
   };
 
   return (
@@ -64,7 +65,7 @@ const About = () => {
                   <div className="mr-3 text-primary">
                     {skillIcons[skill.category as keyof typeof skillIcons]}
                   </div>
-                  <h3 className="font-display font-medium text-md">{skill.category =='PMT'? 'Project Management Tools': skill.category}</h3>
+                  <h3 className="font-display font-medium text-md">{skill.category =='PMT'? 'Project Management Tools': skill.category =='IDE'? 'IDE Tools' :  skill.category}</h3>
                   <hr className="border-t-2 border-gray-300 my-4"></hr>
                 </div>
                 <ul className="space-y-2">

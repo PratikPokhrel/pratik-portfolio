@@ -28,8 +28,8 @@ const Hero = () => {
 
 
   return (
-    <section className="min-h-screen flex items-center pt-24 pb-16 bg-secondary/50">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="min-h-screen flex items-center pt-24 pb-16 ">
+      <div className="container mx-auto px-6 md:px-12 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 stagger-animation">
             <div className="inline-block bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-sm font-medium mb-6" 
