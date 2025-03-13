@@ -27,7 +27,7 @@ const About = () => {
     },
     {
       category: 'IDE',
-      items: ['Visual Studio', 'Visual Studio Code', 'Sublime Text', 'Notepada ++']
+      items: ['Visual Studio', 'Visual Studio Code', 'Sublime Text', 'Notepad ++']
     },
 
   ];
