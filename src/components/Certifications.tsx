@@ -121,7 +121,7 @@ const Certifications = () => {
         
         <div className="flex justify-center mt-8 mb-10">
           <div className="bg-secondary rounded-lg p-1 flex">
-            <button
+            {/* <button
               className={cn(
                 'px-6 py-2 rounded-md transition-colors font-medium',
                 activeTab === 'certifications'
@@ -131,7 +131,7 @@ const Certifications = () => {
               onClick={() => handleTabChange('certifications')}
             >
               Certifications
-            </button>
+            </button> */}
             
           </div>
         </div>
@@ -152,7 +152,7 @@ const Certifications = () => {
                         <p className="text-muted-foreground">{cert.issuer}</p>
                       </div>
                     </div>
-                    <div className="flex items-center text-muted-foreground text-sm">
+                    <div className="flex items-center  text-sm">
                       <Calendar size={14} className="mr-1" />
                       <span>{cert.date}</span>
                     </div>
@@ -167,7 +167,7 @@ const Certifications = () => {
                         <span
                           key={skill}
                           className="skill-badge text-xs"
-                          style={{backgroundColor:'#D9EAFD'}}
+                          style={{backgroundColor:'#D9EAFD', cursor:'pointer'}}
                         >
                           {skill}
                         </span>

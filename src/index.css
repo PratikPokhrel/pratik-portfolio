@@ -119,6 +119,7 @@
   
   .section-heading::after {
     content: "";
+    width: 100% !important;
     @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full;
   }
   
@@ -221,7 +222,7 @@
 }
 
 .image-blur {
-  filter: blur(20px);
+  filter: blur(2px);
   transform: scale(1.1);
   transition: filter 0.8s ease, transform 0.8s ease;
 }

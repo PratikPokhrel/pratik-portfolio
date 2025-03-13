@@ -13,20 +13,35 @@ const Hero = () => {
     }
   }, []);
 
+
+  // Get the base URL for assets based on environment
+  const getBasePath = () => {
+    // For local development with Vite or when running from cloned repo
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return window.location.pathname.includes('uploads') ? '' : '/';
+    }
+    
+    // For GitHub Pages or other deployed environments
+    const basePath = import.meta.env.BASE_URL || '/';
+    return basePath === '/' ? '' : basePath;
+  };
+
+
   return (
     <section className="min-h-screen flex items-center pt-24 pb-16 bg-secondary/50">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 stagger-animation">
-            <div className="inline-block bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-sm font-medium mb-6">
+            <div className="inline-block bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-sm font-medium mb-6" 
+                          style={{backgroundColor:'#D9EAFD', cursor:'pointer'}}
+                          >
               Full Stack Developer
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
               Hi, I'm Pratik Pokharel
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-md">
-              With 3+ years of experience in .NET, C#, and web development, I build efficient, scalable solutions to complex problems. Let's create something exceptional together.
-            </p>
+            With over three years of experience in  C#.NET, MSSQL, ReactJS, Angular and web development, I specialize in building efficient and scalable solutions to tackle complex challenges. Let’s collaborate to create something outstanding            </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
@@ -48,7 +63,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-10 rounded-xl"></div>
               <img
                 ref={imageRef}
-                src="/lovable-uploads/1d519867-97a8-4942-bc8b-a70c68d172e2.png"
+                src={`${getBasePath()}/uploads/364753015_9684088654998843_5728523195615897320_n.jpg`}
                 alt="Pratik Pokharel"
                 className={`w-full h-full object-cover ${isImageLoaded ? 'loaded' : 'image-blur'}`}
                 onLoad={() => setIsImageLoaded(true)}

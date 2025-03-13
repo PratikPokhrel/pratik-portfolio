@@ -14,7 +14,7 @@ const About = () => {
     },
     {
       category: 'Database',
-      items: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB',]
+      items: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB','Firebase']
     },
     
     {
@@ -24,6 +24,10 @@ const About = () => {
     {
       category: 'PMT',
       items: ['Azure DevOps', 'JIRA', 'GitLab', 'Asana']
+    },
+    {
+      category: 'IDE Toola',
+      items: ['Visual Studio', 'Visual Studio Code', 'Sublime Text', 'Notepada ++']
     },
 
   ];
@@ -44,7 +48,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="space-y-6">
             <p className="text-md">
-              I'm a committed full-stack developer with over three years of experience in building web applications, business solutions, and data analysis. My core expertise lies in web application software development, C#, ASP.NET, database systems, and data analytics using Excel, Power BI, and SQL, enabling me to develop efficient, scalable, and maintainable applications.
+              I'm a committed full-stack developer with over three years of experience in building web applications, business solutions, and data analysis. My core expertise lies in web application software development, C#, ASP.NET, Python, database systems, and data analytics using Excel, Power BI, and SQL.
             </p>
             <p className="text-md">
             Currently pursuing my Master's in Information and Communication Technology at the University of Sunshine Coast, I'm expanding my knowledge while applying my skills to real-world problems. Throughout my studies, I have gained expertise in Data Visualization, Databases, Python Programming, Machine Learning, Cryptography, Blockchain, Cybersecurity, device and network Security.            </p>

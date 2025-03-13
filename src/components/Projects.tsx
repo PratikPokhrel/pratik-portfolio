@@ -7,7 +7,7 @@ const projectsData = [
   {
     id: 1,
     title: 'University Project - Greyhound Racing Data',
-    description: 'Directed a data scraping and analytics project, processing over 3 million rows of racing data by implementing a structured pipeline for seamless extraction and storage in a local MSSQL database.',
+    description: 'Led a data scraping, extraction and analytics project under the supervision of Professor Antony Bedford and an external client, processing over 3 million rows of racing data. Designed and implemented a structured pipeline for efficient extraction and storage in a local MSSQL database, ensuring seamless data processing and management.',
     technologies: ['Python', 'BeautifulSoup', 'Selenium', 'MSSQL', 'ReactJS'],
     imageUrl: 'https://cdn.animalsaustralia.org/wp-content/uploads/2021/11/25104330/Greyhound_RacingHeader.jpg',
     codeUrl: 'https://github.com/PratikPokhrel/GBGR_Scraper',
@@ -15,7 +15,7 @@ const projectsData = [
   {
     id: 2,
     title: 'Enterprise Resource Planning System',
-    description: 'Developed and maintained Finance, ERP, HMS, and HRMS applications for businesses, ensuring scalable and efficient business solutions with multiple integrated modules.',
+    description: 'At Rigo Nepal, a well-established software company in Nepal, I played a key role in designing, developing, and maintaining Finance, ERP, HMS, and HRMS applications. These solutions were built with scalability, high performance, and efficiency in mind, integrating multiple modules to streamline business operations. My work focused on enhancing data management, optimizing workflows, and improving overall business efficiency. Collaborating closely with a dynamic development team, I contributed to building robust software tailored to diverse business needs, ensuring seamless integration and usability for clients across various industries.',
     technologies: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'ReactJS', 'API'],
     imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxNzc3Mw&ixlib=rb-4.0.3&q=80&w=900',
     codeUrl: 'https://github.com/PratikPokhrel',
@@ -23,7 +23,7 @@ const projectsData = [
   {
     id: 3,
     title: 'Dynamic Form Builder',
-    description: 'Designed and implemented a dynamic drag-and-drop form builder for surveys, leveraging JSON queries for automatic form generation with customizable templates.',
+    description: 'Designed and implemented a dynamic drag-and-drop form builder for surveys using .NET Core, API, PostgreSQL, and Angular. Leveraging custom JSON queries, the application enabled automatic form generation with customizable templates, allowing surveyors to create and modify dynamic forms seamlessly during data collection.',
     technologies: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'ReactJS', 'API'],
     imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxNzc3Ng&ixlib=rb-4.0.3&q=80&w=900',
     codeUrl: 'https://github.com/PratikPokhrel',
@@ -85,7 +85,7 @@ const Projects = () => {
                       
                       <div className="p-6 md:p-8 flex flex-col">
                         <h3 className="text-2xl font-display font-semibold mb-4">{project.title}</h3>
-                        <p className="mb-6 text-muted-foreground flex-grow">{project.description}</p>
+                        <p className="mb-6 text-muted-foreground flex-grow text-sm">{project.description}</p>
                         
                         <div className="mb-6">
                           <h4 className="text-sm uppercase tracking-wider text-muted-foreground mb-2">Technologies</h4>
@@ -93,9 +93,12 @@ const Projects = () => {
                             {project.technologies.map((tech) => (
                               <span 
                                 key={tech} 
+                                style={{backgroundColor:'#D9EAFD', cursor:'pointer'}}
                                 className="skill-badge"
                               >
-                                {tech}
+                               <span className='text-sm'
+                                
+                               >{tech}</span> 
                               </span>
                             ))}
                           </div>

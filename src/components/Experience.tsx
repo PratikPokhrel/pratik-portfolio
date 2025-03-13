@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 const experienceData = [
   {
     id: 1,
-    role: 'Mid-Level Software Developer',
+    role: 'Software Developer',
     company: 'Rigo Technologies Nepal',
     duration: 'May 2021 - Mar 2022',
     description: [
@@ -22,7 +22,7 @@ const experienceData = [
     company: 'Verisk Nepal',
     duration: 'Aug 2020 - Mar 2021',
     description: [
-      'Worked at a well-established U.S.-based healthcare provider company outsourced in Nepal',
+      'Worked at a well-established U.S. based healthcare provider company outsourced in Nepal',
       'Designed, developed, and maintained scalable ASP.NET Core Web API and .NET Core applications by implementing new features and enhancements to meet business requirements',
       'Created and optimized complex Stored Procedures, Functions, and Queries using SQL Server, ensuring efficient data retrieval and processing',
       'Managed features and tasks, ensuring timely completion ahead of deadlines',
