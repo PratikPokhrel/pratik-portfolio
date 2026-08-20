@@ -115,9 +115,10 @@ const Certifications = () => {
   };
 
   return (
-    <section id="certifications" className="py-20 bg-secondary/50">
+    <section id="certifications" className="py-20 bg-[#e9eee9]">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="section-heading text-center mx-auto">Certifications & Courses</h2>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">04 / Standards & assurance</p>
+        <h2 className="section-heading">Credentials that support the practice</h2>
         
         <div className="flex justify-center mt-8 mb-10">
           <div className="bg-secondary rounded-lg p-1 flex">
@@ -143,13 +144,13 @@ const Certifications = () => {
           {activeTab === 'certifications' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certificationsData.map((cert) => (
-                <div key={cert.id} className="glass-panel rounded-lg p-6 card-hover">
+                <div key={cert.id} className="glass-panel p-6 card-hover">
                   <div className="flex items-start justify-between">
                     <div className="flex items-start">
                       <Award className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
                       <div>
                         <h3 className="font-display font-semibold text-lg">{cert.title}</h3>
-                        <p className="text-muted-foreground">{cert.issuer}</p>
+                        <p className="text-sm text-muted-foreground">{cert.issuer} / {cert.credentialId}</p>
                       </div>
                     </div>
                     <div className="flex items-center  text-sm">

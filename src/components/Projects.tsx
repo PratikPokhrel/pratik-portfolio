@@ -6,6 +6,17 @@ import { cn } from '@/lib/utils';
 const projectsData = [
   {
     id: 1,
+    title: 'Enterprise Metadata Catalogue & Data Quality Platform',
+    description: 'Independent project demonstrating a metadata governance platform for metadata scanning and harvesting, catalogue curation, data profiling, data quality rule management, data ownership assignment, enterprise data dictionary and business glossary development, data classification, and sensitive data tagging.',
+    technologiesLabel: 'Features',
+    technologies: ['Metadata scanning', 'Metadata harvesting', 'Data profiling', 'DQ rules', 'Data dictionary', 'Business glossary', 'Classification', 'Sensitive data tagging'],
+    hideCodeIcon: true,
+    imageUrl: `${import.meta.env.BASE_URL}uploads/image_cat.png`,
+    secondaryImageUrl: `${import.meta.env.BASE_URL}uploads/image.png`,
+    codeUrl: 'https://github.com/PratikPokhrel',
+  },
+  {
+    id: 2,
     title: 'University Project - Greyhound Racing Data',
     description: 'Led a data scraping, extraction and analytics project under the supervision of Professor Antony Bedford and an external client, processing over 3 million rows of racing data. Designed and implemented a structured pipeline for efficient extraction and storage in a local MSSQL database, ensuring seamless data processing and management.',
     technologies: ['Python', 'BeautifulSoup', 'Selenium', 'MSSQL', 'ReactJS'],
@@ -13,7 +24,7 @@ const projectsData = [
     codeUrl: 'https://github.com/PratikPokhrel/GBGR_Scraper',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Enterprise Resource Planning System',
     description: 'At Rigo Nepal, a well-established software company in Nepal, I played a key role in designing, developing, and maintaining Finance, ERP, HMS, and HRMS applications. These solutions were built with scalability, high performance, and efficiency in mind, integrating multiple modules to streamline business operations. My work focused on enhancing data management, optimizing workflows, and improving overall business efficiency. Collaborating closely with a dynamic development team, I contributed to building robust software tailored to diverse business needs, ensuring seamless integration and usability for clients across various industries.',
     technologies: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'ReactJS', 'API'],
@@ -21,7 +32,7 @@ const projectsData = [
     codeUrl: 'https://github.com/PratikPokhrel',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Dynamic Form Builder',
     description: 'Designed and implemented a dynamic drag-and-drop form builder for surveys using .NET Core, API, PostgreSQL, and Angular. Leveraging custom JSON queries, the application enabled automatic form generation with customizable templates, allowing surveyors to create and modify dynamic forms seamlessly during data collection.',
     technologies: ['C#', 'ASP.NET MVC', 'ASP.NET Core', 'Entity Framework', 'SQL Server', 'ReactJS', 'API'],
@@ -56,9 +67,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-secondary/30">
+    <section id="projects" className="py-20 bg-[#f7f3ea]">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="section-heading text-center mx-auto">Featured Projects</h2>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">03 / Metadata systems</p>
+        <h2 className="section-heading">Built for the catalogue</h2>
         
         <div className="mt-12 relative">
           <div ref={carouselRef} className="overflow-hidden">
@@ -68,27 +80,33 @@ const Projects = () => {
             >
               {projectsData.map((project, index) => (
                 <div key={project.id} className="min-w-full">
-                  <div className="glass-panel rounded-lg overflow-hidden shadow-lg">
+                  <div className="glass-panel overflow-hidden shadow-lg">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
-                      <div className="relative h-64 lg:h-auto image-blur-wrapper overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
-                        <img
-                          src={project.imageUrl}
-                          alt={project.title}
-                          className={cn(
-                            'w-full h-full object-cover',
-                            isImageLoaded[index] ? 'loaded' : 'image-blur'
+                      <div className="relative image-blur-wrapper overflow-hidden bg-[#0d1c28] p-3">
+                        <div className="flex flex-col gap-3">
+                          <img
+                            src={project.imageUrl}
+                            alt={`${project.title} metadata catalogue screenshot`}
+                            className={cn('h-auto max-h-[360px] w-full object-contain', isImageLoaded[index] ? 'loaded' : 'image-blur')}
+                            onLoad={() => handleImageLoad(index)}
+                          />
+                          {project.secondaryImageUrl && (
+                            <img
+                              src={project.secondaryImageUrl}
+                              alt={`${project.title} data quality and profiling screenshot`}
+                              className="h-auto max-h-[360px] w-full object-contain"
+                            />
                           )}
-                          onLoad={() => handleImageLoad(index)}
-                        />
+                        </div>
                       </div>
                       
                       <div className="p-6 md:p-8 flex flex-col">
+                        <p className="mb-2 text-xs uppercase tracking-wider text-primary">My metadata application</p>
                         <h3 className="text-2xl font-display font-semibold mb-4">{project.title}</h3>
                         <p className="mb-6 text-muted-foreground flex-grow text-sm">{project.description}</p>
                         
                         <div className="mb-6">
-                          <h4 className="text-sm uppercase tracking-wider text-muted-foreground mb-2">Technologies</h4>
+                          <h4 className="text-sm uppercase tracking-wider text-muted-foreground mb-2">{project.technologiesLabel ?? 'Technologies'}</h4>
                           <div className="flex flex-wrap gap-2">
                             {project.technologies.map((tech) => (
                               <span 
@@ -112,7 +130,7 @@ const Projects = () => {
                             className="flex items-center px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
                           >
                             Code
-                            <Github size={16} className="ml-2" />
+                            {!project.hideCodeIcon && <Github size={16} className="ml-2" />}
                           </a>
                         </div>
                       </div>

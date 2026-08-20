@@ -1,71 +1,77 @@
 
-import { Code, Server, Database, Layout, ChartBar, Workflow, Text } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Database, ShieldCheck, BookOpen, ChartBar, Workflow, Code } from 'lucide-react';
 
 const About = () => {
   const skills = [
     {
-      category: 'Frontend',
-      items: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Angular', 'React & React Native']
+      category: 'Governance, Metadata & Protection',
+      items: ['Microsoft Purview', 'Data Scanning & Cataloguing', 'Data Enrichment & Curation',
+         'Data Lineage', 
+         'SITs & PII Discovery', 
+          'Data dictionaries & Business Glossaries',
+         'Master Data Management (MDM)']
     },
     {
-      category: 'Backend',
-      items: ['C, C++, C#', 'Python', '.NET Core', 'ASP.NET MVC', 'Entity Framework']
+      category: 'Domain Architecture & Stewardship',
+      items: ['Data Domain Design', 'Ownership & Stewardship Models', 'Critical Data Element (CDE) Identification', 'MortarCAPS Canonical Mapping', 'Canonical Mapping', 'Conceptual, Logical and Physical Data Model Design']
     },
     {
-      category: 'Database',
-      items: ['MSSQL,MySQL', 'PostgreSQL', 'MongoDB','Firebase']
+      category: 'Data Quality & Remediation',
+      items: ['DQ Rules & Rule Authoring', 'Automated Profiling & Validation', 'Root Cause Analysis', 'Remediation Workflows']
     },
-    
+
     {
-      category: 'Analytics',
-      items: ['Excel', 'PowerBI', 'SQL']
-    },
-    {
-      category: 'PMT',
-      items: ['Azure DevOps', 'JIRA', 'GitLab', 'Asana']
+      category: 'BI & Data Engineering',
+      items: ['Azure Synapse DW, Databricks', 'Advanced SQL & DAX', 'SQL Server', 'Stored Procedures', 'Query Optimization','Python']
     },
     {
-      category: 'IDE',
-      items: ['Visual Studio', 'Visual Studio Code', 'Sublime Text', 'Notepad ++']
+      category: 'Software Engineering',
+      items: ['C# .NET', 'C++', 'REST APIs', 'ReactJS', ]
+    },
+    {
+      category: 'Frameworks & Security Policies',
+      items: ['DAMA-DMBOK', 'CAUDIT', 'MortarCAPS Data Standards', 'Security & Classification Policies']
     },
 
   ];
 
   const skillIcons = {
-    Frontend: <Layout className="h-4 w-4" />,
-    Backend: <Server className="h-6 w-6" />,
-    Database: <Database className="h-6 w-6" />,
-    Analytics: <ChartBar className="h-6 w-6" />,
-    PMT : <Workflow className="h-6 w-6" />,
-    IDE :<Text className="h-6 w-6" />,
+    'Governance, Metadata & Protection': <ShieldCheck className="h-6 w-6" />,
+    'Domain Architecture & Stewardship': <Workflow className="h-6 w-6" />,
+    'Data Quality & Remediation': <ChartBar className="h-6 w-6" />,
+    'BI & Data Engineering': <Database className="h-6 w-6" />,
+    'Software Engineering': <Code className="h-6 w-6" />,
+    'Frameworks & Security Policies': <BookOpen className="h-6 w-6" />,
   };
 
   return (
-    <section id="about" className="py-20 bg-secondary/50">
+    <section id="about" className="py-20 bg-[#f7f3ea]">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="section-heading text-center mx-auto">About Me</h2>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">01 / Governance practice</p>
+            <h2 className="section-heading mb-0">The operating layer for trusted data</h2>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 mt-12">
           <div className="space-y-6">
             <p className="text-md">
-              I'm a committed full-stack developer with over three years of experience in building web applications, business solutions, and data analysis. My core expertise lies in web application software development, C#, ASP.NET, Python, database systems, and data analytics using Excel, Power BI, and SQL.
+I am a Data Governance and BI Specialist dedicated to making enterprise data secure, trusted, and decision-ready. Guided by DAMA-DMBOK principles, I build the operational backbone for data trust, leading initiatives across governance policy, metadata management, classification, data dictionaries, business glossaries, CDEs, automated quality rules, and lineage mapping.
+
+Backed by a Master of ICT and a software engineering foundation across Python, SQL, C# .NET, ReactJS, Azure, Synapse, and Databricks, I bridge high-level governance strategy with hands-on automation, secure pipelines, and reliable analytics.
             </p>
-            <p className="text-md">
-            Currently pursuing my Master's in Information and Communication Technology at the University of Sunshine Coast, I'm expanding my knowledge while applying my skills to real-world problems. Throughout my studies, I have gained expertise in Data Visualization, Databases, Python Programming, Machine Learning, Cryptography, Blockchain, Cybersecurity, device and network Security.            </p>
-            <p className="text-md">
-              My experience includes developing business applications, designing data access layers, optimizing database performance, and crafting responsive user interfaces. I have hands-on experience with C#, .NET, MSSQL, PostgreSQL, JavaScript, React, and Angular. Additionally, I specialize in data analytics using Excel, Power BI, and SQL. I'm passionate about learning new technologies and finding innovative solutions to complex problems.
-            </p>
+
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {skills.map((skill) => (
-              <div key={skill.category} className="glass-panel rounded-lg p-4 card-hover" style={{backgroundColor:'#F9F5F6'}}>
+              <div key={skill.category} className="glass-panel rounded-lg p-4 card-hover">
                 <div className="flex items-center mb-4">
                   <div className="mr-3 text-primary">
                     {skillIcons[skill.category as keyof typeof skillIcons]}
                   </div>
-                  <h3 className="font-display font-medium text-md">{skill.category =='PMT'? 'Project Management Tools': skill.category =='IDE'? 'IDE Tools' :  skill.category}</h3>
+                  <h3 className="font-display font-medium text-md">{skill.category}</h3>
                   <hr className="border-t-2 border-gray-300 my-4"></hr>
                 </div>
                 <ul className="space-y-2">

@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-display font-semibold">Contact</h3>
             <address className="not-italic text-muted-foreground">
-              <p>Noosa Heads, Queensland 4567</p>
+              <p>Chermside, Brisbane, QLD 4032</p>
               <a href="mailto:pratikpokhrel1@outlook.com" className="block mt-1 hover:text-primary transition-colors">pratikpokhrel1@outlook.com</a>
               <p className="mt-1">+61 450829957</p>
             </address>
@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-border text-center text-sm text-muted-foreground">
           <p>© {currentYear} Pratik Pokharel. All rights reserved.</p>
-          <p className="mt-1">Full Stack Developer specializing in .NET and web technologies</p>
+          <p className="mt-1">Data governance, metadata management, and BI engineering</p>
         </div>
       </div>
     </footer>

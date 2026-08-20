@@ -39,14 +39,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section id="contact" className="py-20 bg-[#0d1c28] text-white">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="section-heading text-center mx-auto">Get In Touch</h2>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">05 / Stewardship exchange</p>
+        <h2 className="section-heading text-white">Bring a data problem</h2>
         
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2 space-y-8">
-            <p className="text-md">
-              Have a project in mind or want to discuss potential opportunities? I'd love to hear from you. Feel free to reach out using the form or through any of the contact methods listed.
+            <p className="text-md text-slate-300">
+              Need a clearer catalogue, stronger ownership, or a more durable quality process? Let’s talk about the data operating model behind it.
             </p>
             
             <div className="space-y-4">
@@ -56,7 +57,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Location</h3>
-                  <p className="text-muted-foreground">Noosa Heads, Queensland 4567</p>
+                  <p className="text-slate-300">Chermside, Brisbane, QLD 4032</p>
                 </div>
               </div>
               
@@ -68,7 +69,7 @@ const Contact = () => {
                   <h3 className="font-medium">Email</h3>
                   <a 
                     href="mailto:pratikpokhrel1@outlook.com" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-slate-300 hover:text-primary transition-colors"
                   >
                     pratikpokhrel1@outlook.com
                   </a>
@@ -81,14 +82,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+61 450829957</p>
+                  <p className="text-slate-300">+61 450829957</p>
                 </div>
               </div>
             </div>
           </div>
           
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="glass-panel rounded-lg p-6 md:p-8 shadow-lg">
+            <form onSubmit={handleSubmit} className="border border-slate-700 bg-[#142b3a] p-6 md:p-8 shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block mb-2 text-sm font-medium">Name</label>
