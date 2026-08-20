@@ -39,8 +39,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#0d1c28] text-white">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="contact" className="relative overflow-hidden py-20 bg-gradient-to-b from-[#0d1c28] via-[#122536] to-[#142b3a] text-white">
+      <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+      <div className="container relative mx-auto px-6 md:px-12">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">05 / Stewardship exchange</p>
         <h2 className="section-heading text-white">Bring a data problem</h2>
         
@@ -51,7 +53,7 @@ const Contact = () => {
             </p>
             
             <div className="space-y-4">
-              <div className="flex items-start">
+              <div className="flex items-start rounded-xl border border-slate-700 bg-[#142b3a] p-4 card-hover">
                 <div className="bg-primary/10 p-3 rounded-full mr-4">
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
@@ -60,23 +62,23 @@ const Contact = () => {
                   <p className="text-slate-300">Chermside, Brisbane, QLD 4032</p>
                 </div>
               </div>
-              
-              <div className="flex items-start">
+
+              <div className="flex items-start rounded-xl border border-slate-700 bg-[#142b3a] p-4 card-hover">
                 <div className="bg-primary/10 p-3 rounded-full mr-4">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <a 
-                    href="mailto:pratikpokhrel1@outlook.com" 
+                  <a
+                    href="mailto:pratikpokhrel1@outlook.com"
                     className="text-slate-300 hover:text-primary transition-colors"
                   >
                     pratikpokhrel1@outlook.com
                   </a>
                 </div>
               </div>
-              
-              <div className="flex items-start">
+
+              <div className="flex items-start rounded-xl border border-slate-700 bg-[#142b3a] p-4 card-hover">
                 <div className="bg-primary/10 p-3 rounded-full mr-4">
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
@@ -87,9 +89,9 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="border border-slate-700 bg-[#142b3a] p-6 md:p-8 shadow-lg">
+            <form onSubmit={handleSubmit} className="rounded-xl border border-slate-700 bg-[#142b3a] p-6 md:p-8 shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block mb-2 text-sm font-medium">Name</label>

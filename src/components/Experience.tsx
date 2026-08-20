@@ -109,7 +109,7 @@ const Experience = () => {
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6 pb-6 border-b border-border">
                   <div>
-                    <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">Active assignment</p>
+                    {/* <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">Active assignment</p> */}
                     <h3 className="font-display text-xl font-semibold">{exp.role}</h3>
                     <p className="text-primary font-medium">{exp.company}</p>
                   </div>

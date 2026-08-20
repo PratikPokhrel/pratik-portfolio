@@ -10,7 +10,7 @@ const projectsData = [
     description: 'Independent project demonstrating a metadata governance platform for metadata scanning and harvesting, catalogue curation, data profiling, data quality rule management, data ownership assignment, enterprise data dictionary and business glossary development, data classification, and sensitive data tagging.',
     technologiesLabel: 'Features',
     technologies: ['Metadata scanning', 'Metadata harvesting', 'Data profiling', 'DQ rules', 'Data dictionary', 'Business glossary', 'Classification', 'Sensitive data tagging'],
-    hideCodeIcon: true,
+    hideCodeButton: true,
     imageUrl: `${import.meta.env.BASE_URL}uploads/image_cat.png`,
     secondaryImageUrl: `${import.meta.env.BASE_URL}uploads/image.png`,
     codeUrl: 'https://github.com/PratikPokhrel',
@@ -122,17 +122,19 @@ const Projects = () => {
                           </div>
                         </div>
                         
-                        <div className="flex gap-4">
-                          <a
-                            href={project.codeUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
-                          >
-                            Code
-                            {!project.hideCodeIcon && <Github size={16} className="ml-2" />}
-                          </a>
-                        </div>
+                        {!project.hideCodeButton && (
+                          <div className="flex gap-4">
+                            <a
+                              href={project.codeUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
+                            >
+                              Code
+                              <Github size={16} className="ml-2" />
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
